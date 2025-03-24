@@ -16,37 +16,49 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
-    <nav class="navbar navbar-expand-sm bg-white fixed-top">
+    <!-- Responsive navbar with hamburger menu -->
+    <nav class="navbar navbar-expand-md bg-white fixed-top">
         <div class="container-fluid">
-                <a class="navbar-brand" href="#">
-                    <img src="Slike/logo.jpg" alt="Hotel Batana Logo" class="d-inline-block align-top" height="50">
-                </a>
+            <a class="navbar-brand" href="#">
+                <img src="Slike/logo.jpg" alt="Hotel Batana Logo" class="d-inline-block align-top" height="50">
+            </a>
+            <!-- Hamburger menu button -->
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <!-- Collapsible navbar content -->
+            <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ml-auto">
-                    <li class="nav-item mr-5">
+                    <li class="nav-item mr-md-5">
                         <a class="nav-link" href="#">Sobe</a>
                     </li>
-                    <li class="nav-item mr-5">
+                    <li class="nav-item mr-md-5">
                         <a class="nav-link" href="#">Restoran</a>
                     </li>
-                    <li class="nav-item mr-5">
+                    <li class="nav-item mr-md-5">
                         <a class="nav-link" href="#">Wellness</a>
                     </li>
-                    <li class="nav-item mr-5">
+                    <li class="nav-item mr-md-5">
                         <a class="nav-link" href="#">Sport i zabava</a>
                     </li>
                     <li class="nav-item">
                         <a class="btn btn-primary" href="#">Rezerviraj</a>
                     </li>
                 </ul>
+            </div>
         </div>
     </nav>
+
+    <!-- Hero section -->
     <div class="position-relative text-center">
         <img src="Slike/slika_1.jpg" class="img-fluid mt-5">
-        <h1 class="position-absolute text-white font-weight-bold w-100" style="top: 50%; left: 50%; transform: translate(-50%, -50%);">
+        <h1 class="position-absolute text-white font-weight-bold w-100 hero-text" style="top: 50%; left: 50%; transform: translate(-50%, -50%);">
             Hotel vaših snova na dohvatu ruke.
         </h1>
     </div>
-    <div class="d-flex align-items-center main-box">
+
+    <!-- First content section -->
+    <div class="main-box">
         <div class="tekst-box">
             <h2 class="mb-4 naslov-text">Hotel Batana nudi vam jedinstveno iskustvo koje nećete zaboraviti.</h2>
             <p class="opis-text">
@@ -62,79 +74,81 @@
             </div>
         </div>
     </div>
-    <div class="d-flex align-items-center main-box">
+
+    <!-- Services section -->
+    <div class="main-box">
         <div class="tekst-box w-100">
             <h2 class="naslov-text mb-5 pb-4">Usluge i pogodnosti</h2>
             <div class="row mx-n4">
-                <!-- Prvi stupac - standardni padding -->
-                <div class="col-md-4 mb-5 px-4">
+                <!-- First row -->
+                <div class="col-12 col-sm-6 col-md-4 mb-4 px-4">
                     <div class="d-flex align-items-center">
                         <span class="check-icon">&#10003;</span>
                         <p class="ml-2 mb-0">Concierge usluga</p>
                     </div>
                 </div>
-                <!-- Drugi stupac - pomaknut više udesno -->
-                <div class="col-md-4 mb-5 px-4 offset-md-0">
-                    <div class="d-flex align-items-center pl-md-4">
+                <div class="col-12 col-sm-6 col-md-4 mb-4 px-4">
+                    <div class="d-flex align-items-center">
                         <span class="check-icon">&#10003;</span>
                         <p class="ml-2 mb-0">Usluga privatnog transfera</p>
                     </div>
                 </div>
-                <!-- Treći stupac - još više udesno -->
-                <div class="col-md-4 mb-5 px-4">
-                    <div class="d-flex align-items-center pl-md-5">
+                <div class="col-12 col-sm-6 col-md-4 mb-4 px-4">
+                    <div class="d-flex align-items-center">
                         <span class="check-icon">&#10003;</span>
                         <p class="ml-2 mb-0">Besplatan Wi-Fi</p>
                     </div>
                 </div>
                 
-                <!-- Ostali redovi slijede isti obrazac -->
-                <div class="col-md-4 mb-5 px-4">
+                <!-- Second row -->
+                <div class="col-12 col-sm-6 col-md-4 mb-4 px-4">
                     <div class="d-flex align-items-center">
                         <span class="check-icon">&#10003;</span>
                         <p class="ml-2 mb-0">Restorani i barovi</p>
                     </div>
                 </div>
-                <div class="col-md-4 mb-5 px-4">
-                    <div class="d-flex align-items-center pl-md-4">
+                <div class="col-12 col-sm-6 col-md-4 mb-4 px-4">
+                    <div class="d-flex align-items-center">
                         <span class="check-icon">&#10003;</span>
                         <p class="ml-2 mb-0">Usluga parkiranja vozila</p>
                     </div>
                 </div>
-                <div class="col-md-4 mb-5 px-4">
-                    <div class="d-flex align-items-center pl-md-5">
+                <div class="col-12 col-sm-6 col-md-4 mb-4 px-4">
+                    <div class="d-flex align-items-center">
                         <span class="check-icon">&#10003;</span>
                         <p class="ml-2 mb-0">Klub za djecu</p>
                     </div>
                 </div>
                 
-                <div class="col-md-4 mb-5 px-4">
+                <!-- Third row -->
+                <div class="col-12 col-sm-6 col-md-4 mb-4 px-4">
                     <div class="d-flex align-items-center">
                         <span class="check-icon">&#10003;</span>
                         <p class="ml-2 mb-0">Wellness & Spa</p>
                     </div>
                 </div>
-                <div class="col-md-4 mb-5 px-4">
-                    <div class="d-flex align-items-center pl-md-4">
+                <div class="col-12 col-sm-6 col-md-4 mb-4 px-4">
+                    <div class="d-flex align-items-center">
                         <span class="check-icon">&#10003;</span>
                         <p class="ml-2 mb-0">Garaža</p>
                     </div>
                 </div>
-                <div class="col-md-4 mb-5 px-4">
-                    <div class="d-flex align-items-center pl-md-5">
+                <div class="col-12 col-sm-6 col-md-4 mb-4 px-4">
+                    <div class="d-flex align-items-center">
                         <span class="check-icon">&#10003;</span>
                         <p class="ml-2 mb-0">Sportski objekti</p>
                     </div>
                 </div>
                 
-                <div class="col-md-4 mb-5 px-4">
+                <!-- Fourth row -->
+                <div class="col-12 col-sm-6 col-md-4 mb-4 px-4">
                     <div class="d-flex align-items-center">
                         <span class="check-icon">&#10003;</span>
                         <p class="ml-2 mb-0">Posluga u sobu 24 sata na dan</p>
                     </div>
                 </div>
-                <div class="col-md-4 mb-5 px-4">
-                    <div class="d-flex align-items-center pl-md-4">
+                <div class="col-12 col-sm-6 col-md-4 mb-4 px-4">
+                    <div class="d-flex align-items-center">
                         <span class="check-icon">&#10003;</span>
                         <p class="ml-2 mb-0">Plaže i bazeni</p>
                     </div>
@@ -142,68 +156,59 @@
             </div>
         </div>
     </div>
-    <div class="d-flex align-items-center main-box">
-        <div class="mt-5 tekst-box">
+
+    <!-- Rooms section -->
+    <div class="main-box">
+        <div class="tekst-box">
             <h2 class="mb-4 naslov-text">Sobe</h2>
             <p class="opis-text">
                 Naš hotel nudi tri vrste soba prilagođene različitim potrebama gostiju. Standardna soba s pogledom na vrt pruža udobnost i mir s privatnim balkonom okrenutim prema mediteranskom zelenilu. Superior soba s pogledom na more nudi prostraniji interijer i spektakularan pogled na more i staru jezgru Rovinja, idealan za opuštanje. Za one koji traže vrhunski luksuz, Deluxe suite s panoramskim pogledom kombinira elegantan dizajn, odvojeni dnevni boravak i prostranu terasu s nezaboravnim pogledom na more.
             </p>
-            <a class="btn btn-primary" href="#">Saznajte više</a>
+            <a class="btn btn-primary mt-3" href="#">Saznajte više</a>
         </div>
-        <div class="mb-5 slika-box">
+        <div class="slika-box">
             <img src="Slike/slika_sobe.jpg" class="main-img">
         </div>
     </div>
 
-    <div class="d-flex align-items-center main-box">
-        <div class="mt-5 tekst-box">
+    <!-- Location section -->
+    <div class="main-box">
+        <div class="tekst-box">
             <h2 class="mb-4 naslov-text">Kako do nas</h2>
-            <p class="opis-text">
-                <div class="col-md-4 mb-5 px-4">
-                    <div class="d-flex align-items-center">
-                        <span class="material-symbols-outlined">pin_drop</span>
-                        <p class="ml-2 mb-0 text-nowrap">Ul. Luigija Montija 9a, 52210, Rovinj</p>
-                    </div>
+            <div class="mb-4">
+                <div class="d-flex align-items-center mb-3">
+                    <span class="material-symbols-outlined">pin_drop</span>
+                    <p class="ml-2 mb-0">Ul. Luigija Montija 9a, 52210, Rovinj</p>
                 </div>
-                <div class="col-md-4 mb-5 px-4">
-                    <div class="d-flex align-items-center">
-                        <span class="material-symbols-outlined">call</span>
-                        <p class="ml-2 mb-0 text-nowrap">+385 91 929 4594</p>
-                    </div>
-                </div>
-            </p>
-            <h3 class="mb-5 podnaslov-text">Udaljenosti</h3>
-            <div class="col-md-5 mb-5 px-4">
                 <div class="d-flex align-items-center">
-                    <p class="ml-2 mb-0 text-nowrap">More ...................................................................................... 150 m</p>
+                    <span class="material-symbols-outlined">call</span>
+                    <p class="ml-2 mb-0">+385 91 929 4594</p>
                 </div>
             </div>
-            <div class="col-md-4 mb-5 px-4">
-                <div class="d-flex align-items-center">
-                    <p class="ml-2 mb-0 text-nowrap">Centar .................................................................................... 2500 m</p>
-                </div>
+            
+            <h3 class="mb-4 podnaslov-text">Udaljenosti</h3>
+            <div class="distance-line mb-3">
+                <p class="mb-2">More <span class="d-none d-md-inline">........................................................................................</span> 150 m</p>
             </div>
-            <div class="col-md-4 mb-5 px-4">
-                <div class="d-flex align-items-center">
-                    <p class="ml-2 mb-0 text-nowrap">Luka ...................................................................................... 140 m</p>
-                </div>
+            <div class="distance-line mb-3">
+                <p class="mb-2">Centar <span class="d-none d-md-inline">....................................................................................</span> 2500 m</p>
             </div>
-            <div class="col-md-4 mb-5 px-4">
-                <div class="d-flex align-items-center">
-                    <p class="ml-2 mb-0 text-nowrap">Trgovina ................................................................................. 600 m</p>
-                </div>
+            <div class="distance-line mb-3">
+                <p class="mb-2">Luka <span class="d-none d-md-inline">.......................................................................................</span> 140 m</p>
             </div>
-            <div class="col-md-4 mb-5 px-4">
-                <div class="d-flex align-items-center">
-                    <p class="ml-2 mb-0 text-nowrap">Autobusna stanica ................................................................... 2300 m</p>
-                </div>
+            <div class="distance-line mb-3">
+                <p class="mb-2">Trgovina <span class="d-none d-md-inline">.................................................................................</span> 600 m</p>
+            </div>
+            <div class="distance-line mb-3">
+                <p class="mb-2">Autobusna stanica <span class="d-none d-md-inline">...................................................................</span> 2300 m</p>
             </div>
         </div>
-        <div class="mb-5 slika-box">
+        <div class="map-box">
             <img src="Slike/mapa.jpg" class="main-img">
         </div>
     </div>
     
+    <!-- Footer -->
     <footer class="footer">
         <div class="footer-container">
             <div class="footer-logo">Hotel Batana</div>
