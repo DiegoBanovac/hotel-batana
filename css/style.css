@@ -335,7 +335,6 @@ body {
   color: rgba(255, 255, 255, 0.7);
 }
 
-/* Hero section responsive styles */
 .hero-text {
   font-size: 1.5rem;
 }
@@ -352,7 +351,6 @@ body {
   }
 }
 
-/* Navbar toggle button styling */
 .navbar-toggler {
   border: none;
   padding: 0.25rem 0.5rem;
@@ -367,7 +365,7 @@ body {
   background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='30' height='30' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(132, 77, 54, 1)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
 }
 
-/* Fix for mobile spacing */
+
 @media (max-width: 767.98px) {
   .navbar-nav {
     margin-top: 1rem;
@@ -382,8 +380,6 @@ body {
     padding-top: 0.5rem;
   }
 }
-
-/* Fix for distance dots on mobile */
 @media (max-width: 767.98px) {
   .distance-line {
     display: flex;

@@ -5,28 +5,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hotel Batana</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=pin_drop" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=call" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-    <!-- Added for footer -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
-    <!-- Responsive navbar with hamburger menu -->
     <nav class="navbar navbar-expand-md bg-white fixed-top">
         <div class="container-fluid">
             <a class="navbar-brand" href="#">
-                <img src="Slike/logo.jpg" alt="Hotel Batana Logo" class="d-inline-block align-top" height="50">
+                <img src="assets/logo.jpg" alt="Hotel Batana Logo" class="d-inline-block align-top" height="50">
             </a>
-            <!-- Hamburger menu button -->
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <!-- Collapsible navbar content -->
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item mr-md-5">
@@ -49,15 +45,13 @@
         </div>
     </nav>
 
-    <!-- Hero section -->
     <div class="position-relative text-center">
-        <img src="Slike/slika_1.jpg" class="img-fluid mt-5">
+        <img src="assets/slika_1.jpg" class="img-fluid mt-5">
         <h1 class="position-absolute text-white font-weight-bold w-100 hero-text" style="top: 50%; left: 50%; transform: translate(-50%, -50%);">
             Hotel vaših snova na dohvatu ruke.
         </h1>
     </div>
 
-    <!-- First content section -->
     <div class="main-box">
         <div class="tekst-box">
             <h2 class="mb-4 naslov-text">Hotel Batana nudi vam jedinstveno iskustvo koje nećete zaboraviti.</h2>
@@ -66,7 +60,7 @@
             </p>
         </div>
         <div class="slika-box">
-            <img src="Slike/slika_2.jpg" class="main-img">
+            <img src="assets/slika_2.jpg" class="main-img">
             <div class="slike-box">
                 <img src="Slike/slika_2.jpg" class="small-img">
                 <img src="Slike/slika_3.jpg" class="small-img">
@@ -75,12 +69,11 @@
         </div>
     </div>
 
-    <!-- Services section -->
     <div class="main-box">
         <div class="tekst-box w-100">
             <h2 class="naslov-text mb-5 pb-4">Usluge i pogodnosti</h2>
             <div class="row mx-n4">
-                <!-- First row -->
+ 
                 <div class="col-12 col-sm-6 col-md-4 mb-4 px-4">
                     <div class="d-flex align-items-center">
                         <span class="check-icon">&#10003;</span>
@@ -100,7 +93,6 @@
                     </div>
                 </div>
                 
-                <!-- Second row -->
                 <div class="col-12 col-sm-6 col-md-4 mb-4 px-4">
                     <div class="d-flex align-items-center">
                         <span class="check-icon">&#10003;</span>
@@ -120,7 +112,6 @@
                     </div>
                 </div>
                 
-                <!-- Third row -->
                 <div class="col-12 col-sm-6 col-md-4 mb-4 px-4">
                     <div class="d-flex align-items-center">
                         <span class="check-icon">&#10003;</span>
@@ -140,7 +131,6 @@
                     </div>
                 </div>
                 
-                <!-- Fourth row -->
                 <div class="col-12 col-sm-6 col-md-4 mb-4 px-4">
                     <div class="d-flex align-items-center">
                         <span class="check-icon">&#10003;</span>
@@ -157,7 +147,6 @@
         </div>
     </div>
 
-    <!-- Rooms section -->
     <div class="main-box">
         <div class="tekst-box">
             <h2 class="mb-4 naslov-text">Sobe</h2>
@@ -167,11 +156,10 @@
             <a class="btn btn-primary mt-3" href="#">Saznajte više</a>
         </div>
         <div class="slika-box">
-            <img src="Slike/slika_sobe.jpg" class="main-img">
+            <img src="assets/slika_sobe.jpg" class="main-img">
         </div>
     </div>
 
-    <!-- Location section -->
     <div class="main-box">
         <div class="tekst-box">
             <h2 class="mb-4 naslov-text">Kako do nas</h2>
@@ -204,11 +192,10 @@
             </div>
         </div>
         <div class="map-box">
-            <img src="Slike/mapa.jpg" class="main-img">
+            <img src="assets/mapa.jpg" class="main-img">
         </div>
     </div>
     
-    <!-- Footer -->
     <footer class="footer">
         <div class="footer-container">
             <div class="footer-logo">Hotel Batana</div>
