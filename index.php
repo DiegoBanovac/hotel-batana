@@ -6,6 +6,8 @@
     <title>Hotel Batana</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/navbar.css">
+    <link rel="stylesheet" href="css/footer.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=pin_drop" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=call" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -15,38 +17,11 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
-    <nav class="navbar navbar-expand-md bg-white fixed-top">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="#">
-                <img src="assets/logo.jpg" alt="Hotel Batana Logo" class="d-inline-block align-top" height="50">
-            </a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ml-auto">
-                    <li class="nav-item mr-md-5">
-                        <a class="nav-link" href="#">Sobe</a>
-                    </li>
-                    <li class="nav-item mr-md-5">
-                        <a class="nav-link" href="#">Restoran</a>
-                    </li>
-                    <li class="nav-item mr-md-5">
-                        <a class="nav-link" href="#">Wellness</a>
-                    </li>
-                    <li class="nav-item mr-md-5">
-                        <a class="nav-link" href="#">Sport i zabava</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="btn btn-primary" href="#">Rezerviraj</a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </nav>
+
+    <?php include('assets/components/navbar.php'); ?>
 
     <div class="position-relative text-center">
-        <img src="assets/slika_1.jpg" class="img-fluid mt-5">
+        <img src="assets/photos/slika_1.jpg" class="img-fluid mt-5">
         <h1 class="position-absolute text-white font-weight-bold w-100 hero-text" style="top: 50%; left: 50%; transform: translate(-50%, -50%);">
             Hotel vaših snova na dohvatu ruke.
         </h1>
@@ -60,11 +35,11 @@
             </p>
         </div>
         <div class="slika-box">
-            <img src="assets/slika_2.jpg" class="main-img">
+            <img src="assets/photos/slika_2.jpg" class="main-img">
             <div class="slike-box">
-                <img src="Slike/slika_2.jpg" class="small-img">
-                <img src="Slike/slika_3.jpg" class="small-img">
-                <img src="Slike/slika_4.jpg" class="small-img">
+                <img src="assets/photos/slika_2.jpg" class="small-img">
+                <img src="assets/photos/slika_3.jpg" class="small-img">
+                <img src="assets/photos/slika_4.jpg" class="small-img">
             </div>
         </div>
     </div>
@@ -156,7 +131,7 @@
             <a class="btn btn-primary mt-3" href="#">Saznajte više</a>
         </div>
         <div class="slika-box">
-            <img src="assets/slika_sobe.jpg" class="main-img">
+            <img src="assets/photos/slika_sobe.jpg" class="main-img">
         </div>
     </div>
 
@@ -192,52 +167,27 @@
             </div>
         </div>
         <div class="map-box">
-            <img src="assets/mapa.jpg" class="main-img">
+            <img src="assets/photos/mapa.jpg" class="main-img">
         </div>
     </div>
-    
-    <footer class="footer">
-        <div class="footer-container">
-            <div class="footer-logo">Hotel Batana</div>
-            <div class="footer-stars">★★★★★</div>
-            
-            <div class="footer-content">
-                <div class="footer-section">
-                    <p>Hotel vaših snova na dohvatu ruke.</p>
-                </div>
-                
-                <div class="footer-section">
-                    <p>Pretplatite se na naš newsletter</p>
-                    <div class="footer-newsletter">
-                        <input type="email" placeholder="E-mail">
-                        <button>Pretplati se</button>
-                    </div>
-                </div>
-                
-                <div class="footer-section">
-                    <p>Povežite se s nama</p>
-                    <div class="footer-social">
-                        <a href="#"><i class="fab fa-instagram"></i></a>
-                        <a href="#"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#"><i class="fab fa-twitter"></i></a>
-                    </div>
-                </div>
-            </div>
-            
-            <a href="#" class="footer-back-to-top">
-                Vrati se na vrh <span>↑</span>
-            </a>
-            
-            <div class="footer-divider"></div>
-            
-            <div class="footer-copyright">
-                © 2025 Batana d.d
-            </div>
-        </div>
-    </footer>
-    
+    <?php include('assets/components/footer.php'); ?>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+    // Selektiramo sve male slike
+    const smallImages = document.querySelectorAll('.small-img');
+    // Selektiramo glavnu sliku unutar .slika-box
+    const mainImage = document.querySelector('.slika-box .main-img');
+
+    // Dodajemo event listener svakoj maloj slici
+    smallImages.forEach(img => {
+        img.addEventListener('click', () => {
+            // Promijenimo src glavne slike na onu koju smo kliknuli
+            mainImage.src = img.src;
+        });
+    });
+    </script>
+
 </body>
 </html>
 
