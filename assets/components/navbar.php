@@ -1,6 +1,6 @@
 <nav class="navbar navbar-expand-md bg-white fixed-top">
         <div class="container-fluid">
-            <a class="navbar-brand" href="#">
+            <a class="navbar-brand" href="./index.php">
                 <img src="assets/photos/logo.jpg" alt="Hotel Batana Logo" class="d-inline-block align-top" height="50">
             </a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -9,19 +9,19 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item mr-md-5">
-                        <a class="nav-link" href="#">Sobe</a>
+                        <a class="nav-link" href="./sobe.php">Sobe</a>
                     </li>
                     <li class="nav-item mr-md-5">
-                        <a class="nav-link" href="#">Restoran</a>
+                        <a class="nav-link" href="./restoran.php">Restoran</a>
                     </li>
                     <li class="nav-item mr-md-5">
-                        <a class="nav-link" href="#">Wellness</a>
+                        <a class="nav-link" href="./rezerviraj.php">Wellness</a>
                     </li>
                     <li class="nav-item mr-md-5">
-                        <a class="nav-link" href="#">Sport i zabava</a>
+                        <a class="nav-link" href="./cjenik.php">Cjenik</a>
                     </li>
                     <li class="nav-item">
-                        <a class="btn btn-primary" href="#">Rezerviraj</a>
+                        <a class="btn btn-primary" href="./wellness.php">Rezerviraj</a>
                     </li>
                 </ul>
             </div>

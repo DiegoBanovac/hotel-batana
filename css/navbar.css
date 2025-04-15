@@ -30,7 +30,7 @@
     color: #844d36;
   }
   
-  .btn {
+  .nav-btn {
     background-color: #844d36;
     border-color: #844d36;
     border-radius: 10px;
@@ -39,7 +39,7 @@
     transition: background 0.3s;
   }
   
-  .btn:hover {
+  .nav-btn:hover {
     background-color: #6b3e2a;
   }
 

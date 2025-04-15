@@ -1,13 +1,13 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="hr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hotel Batana</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
-    <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/navbar.css">
     <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/style.css?v=<?php echo time(); ?>">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=pin_drop" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=call" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -15,16 +15,20 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script type="module" src="js/index.js"></script>
 </head>
 <body>
 
     <?php include('assets/components/navbar.php'); ?>
 
-    <div class="position-relative text-center">
-        <img src="assets/photos/slika_1.jpg" class="img-fluid mt-5">
-        <h1 class="position-absolute text-white font-weight-bold w-100 hero-text" style="top: 50%; left: 50%; transform: translate(-50%, -50%);">
-            Hotel vaših snova na dohvatu ruke.
-        </h1>
+    <div class="position-relative text-center hero-banner">
+    <video autoplay loop muted playsinline class="fullscreen-video">
+            <source src="assets/videos/video1.webm" type="video/mp4">
+            Tvoj preglednik ne podržava video format.
+    </video>
+    <h1 class="hero-text">
+        Hotel vaših snova na dohvatu ruke.
+    </h1>
     </div>
 
     <div class="main-box">
@@ -47,7 +51,7 @@
     <div class="main-box">
         <div class="tekst-box w-100">
             <h2 class="naslov-text mb-5 pb-4">Usluge i pogodnosti</h2>
-            <div class="row mx-n4">
+            <div class="tabela row mx-n4">
  
                 <div class="col-12 col-sm-6 col-md-4 mb-4 px-4">
                     <div class="d-flex align-items-center">
@@ -150,25 +154,25 @@
             </div>
             
             <h3 class="mb-4 podnaslov-text">Udaljenosti</h3>
-            <div class="distance-line mb-3">
-                <p class="mb-2">More <span class="d-none d-md-inline">........................................................................................</span> 150 m</p>
-            </div>
-            <div class="distance-line mb-3">
-                <p class="mb-2">Centar <span class="d-none d-md-inline">....................................................................................</span> 2500 m</p>
-            </div>
-            <div class="distance-line mb-3">
-                <p class="mb-2">Luka <span class="d-none d-md-inline">.......................................................................................</span> 140 m</p>
-            </div>
-            <div class="distance-line mb-3">
-                <p class="mb-2">Trgovina <span class="d-none d-md-inline">.................................................................................</span> 600 m</p>
-            </div>
-            <div class="distance-line mb-3">
-                <p class="mb-2">Autobusna stanica <span class="d-none d-md-inline">...................................................................</span> 2300 m</p>
-            </div>
+            <div class="container mt-4">
+  <div class="d-flex justify-content-between border-bottom py-2">
+    <span>More</span><span>150 m</span>
+  </div>
+  <div class="d-flex justify-content-between border-bottom py-2">
+    <span>Centar</span><span>2500 m</span>
+  </div>
+  <div class="d-flex justify-content-between border-bottom py-2">
+    <span>Luka</span><span>140 m</span>
+  </div>
+  <div class="d-flex justify-content-between border-bottom py-2">
+    <span>Trgovina</span><span>600 m</span>
+  </div>
+  <div class="d-flex justify-content-between border-bottom py-2">
+    <span>Autobusna stanica</span><span>2300 m</span>
+  </div>
+</div>
         </div>
-        <div class="map-box">
-            <img src="assets/photos/mapa.jpg" class="main-img">
-        </div>
+        <div id="map"></div>
     </div>
     <?php include('assets/components/footer.php'); ?>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
@@ -187,7 +191,8 @@
         });
     });
     </script>
-
+    <!-- prettier-ignore -->
+    <script>(g=>{var h,a,k,p="The Google Maps JavaScript API",c="google",l="importLibrary",q="__ib__",m=document,b=window;b=b[c]||(b[c]={});var d=b.maps||(b.maps={}),r=new Set,e=new URLSearchParams,u=()=>h||(h=new Promise(async(f,n)=>{await (a=m.createElement("script"));e.set("libraries",[...r]+"");for(k in g)e.set(k.replace(/[A-Z]/g,t=>"_"+t[0].toLowerCase()),g[k]);e.set("callback",c+".maps."+q);a.src=`https://maps.${c}apis.com/maps/api/js?`+e;d[q]=f;a.onerror=()=>h=n(Error(p+" could not load."));a.nonce=m.querySelector("script[nonce]")?.nonce||"";m.head.append(a)}));d[l]?console.warn(p+" only loads once. Ignoring:",g):d[l]=(f,...n)=>r.add(f)&&u().then(()=>d[l](f,...n))})
+        ({key: "AIzaSyAXmwDkZN6J5h5nS7aOeiUAYpUFpw0LB6w", v: "weekly"});</script>
 </body>
 </html>
-

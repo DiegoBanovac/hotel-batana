@@ -5,10 +5,32 @@
   font-family: "Roboto Condensed", sans-serif;
 }
 
+#map {
+  height: 40rem; /* ili koliko želiš */
+  width: 50%;
+  border-radius: 15px;
+}
+@media (max-width: 1000px) {
+  #map {
+    width: 100%;
+    height: 25rem;
+  }
+}
+
 body {
   background-color: #fff;
   color: #474853;
   font-weight: 500;
+}
+
+.banner-img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 1;
 }
 
 .btn {
@@ -139,8 +161,8 @@ body {
 }
 
 .small-img {
-  width: 90px;
-  height: 60px;
+  width: 10rem;
+  height: 4.5rem;
   border-radius: 15px;
   object-fit: cover;
   transition: transform 0.3s;
@@ -148,8 +170,20 @@ body {
 
 @media (min-width: 576px) {
   .small-img {
-    width: 120px;
-    height: 80px;
+    width: 8rem;
+    height: 5.5rem;
+  }
+}
+@media (min-width: 992px) {
+  .small-img {
+    width: 9rem;
+    height: 6rem;
+  }
+}
+@media (max-width: 767.98px) {
+  .small-img {
+    width: 6.4rem;
+    height: 4.5rem;
   }
 }
 
@@ -169,6 +203,28 @@ body {
   }
 }
 
+.tabela {
+  padding-left: 2rem;
+}
+@media (min-width: 576px) {
+  .tabela {
+    padding-left: 2rem;
+  }
+}
+@media (min-width: 650px) {
+  .tabela {
+    padding-left: 2rem;
+  }
+}
+
+@media (min-width: 1500px) {
+  .tabela {
+    padding-left: 14rem;
+    margin: 0 auto;
+    max-width: 180rem;
+  }
+}
+
 .check-icon {
   color: #844d36;
   font-size: 1.2rem;
@@ -180,30 +236,55 @@ body {
   color: #844d36;
 }
 
-.hero-text {
-  font-size: 1.5rem;
+.hero-banner {
+  position: relative;
+  height: 25rem;
+  overflow: hidden;
 }
 
 @media (min-width: 576px) {
-  .hero-text {
-    font-size: 2rem;
+  .hero-banner {
+    height: 32rem;
   }
 }
 
 @media (min-width: 992px) {
+  .hero-banner {
+    height: 38rem;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .hero-banner {
+    height: 23rem;
+  }
+}
+
+.hero-text {
+  position: absolute;
+  top: 57%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-size: 2rem;
+  font-weight: bold;
+  z-index: 2;
+  width: 100%;
+  padding: 0 1rem;
+}
+
+@media (min-width: 576px) {
   .hero-text {
     font-size: 2.5rem;
   }
 }
 
-@media (max-width: 767.98px) {
-  .distance-line {
-    display: flex;
-    flex-direction: column;
-  }
-
-  .distance-line p {
-    white-space: normal !important;
+@media (min-width: 992px) {
+  .hero-text {
+    font-size: 3rem;
   }
 }
 
+.border-bottom {
+  border-bottom: 1px dotted #aaa !important;
+}
