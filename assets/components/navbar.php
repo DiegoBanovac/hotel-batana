@@ -15,13 +15,13 @@
                         <a class="nav-link" href="./restoran.php">Restoran</a>
                     </li>
                     <li class="nav-item mr-md-5">
-                        <a class="nav-link" href="./rezerviraj.php">Wellness</a>
+                        <a class="nav-link" href="./wellness.php">Wellness</a>
                     </li>
                     <li class="nav-item mr-md-5">
                         <a class="nav-link" href="./cjenik.php">Cjenik</a>
                     </li>
                     <li class="nav-item">
-                        <a class="btn btn-primary" href="./wellness.php">Rezerviraj</a>
+                        <a class="btn btn-primary" href="./rezerviraj.php">Rezerviraj</a>
                     </li>
                 </ul>
             </div>

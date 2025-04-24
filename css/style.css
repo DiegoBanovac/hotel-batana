@@ -204,16 +204,16 @@ body {
 }
 
 .tabela {
-  padding-left: 2rem;
+  padding-left: 0rem;
 }
 @media (min-width: 576px) {
   .tabela {
-    padding-left: 2rem;
+    padding-left: 0rem;
   }
 }
 @media (min-width: 650px) {
   .tabela {
-    padding-left: 2rem;
+    padding-left: 0rem;
   }
 }
 

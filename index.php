@@ -18,7 +18,7 @@
     <script type="module" src="js/index.js"></script>
 </head>
 <body>
-
+    <?php require_once 'config.php'; ?>
     <?php include('assets/components/navbar.php'); ?>
 
     <div class="position-relative text-center hero-banner">
@@ -132,7 +132,7 @@
             <p class="opis-text">
                 Naš hotel nudi tri vrste soba prilagođene različitim potrebama gostiju. Standardna soba s pogledom na vrt pruža udobnost i mir s privatnim balkonom okrenutim prema mediteranskom zelenilu. Superior soba s pogledom na more nudi prostraniji interijer i spektakularan pogled na more i staru jezgru Rovinja, idealan za opuštanje. Za one koji traže vrhunski luksuz, Deluxe suite s panoramskim pogledom kombinira elegantan dizajn, odvojeni dnevni boravak i prostranu terasu s nezaboravnim pogledom na more.
             </p>
-            <a class="btn btn-primary mt-3" href="#">Saznajte više</a>
+            <a class="btn btn-primary mt-3" href="./sobe.php">Saznajte više</a>
         </div>
         <div class="slika-box">
             <img src="assets/photos/slika_sobe.jpg" class="main-img">
@@ -193,6 +193,6 @@
     </script>
     <!-- prettier-ignore -->
     <script>(g=>{var h,a,k,p="The Google Maps JavaScript API",c="google",l="importLibrary",q="__ib__",m=document,b=window;b=b[c]||(b[c]={});var d=b.maps||(b.maps={}),r=new Set,e=new URLSearchParams,u=()=>h||(h=new Promise(async(f,n)=>{await (a=m.createElement("script"));e.set("libraries",[...r]+"");for(k in g)e.set(k.replace(/[A-Z]/g,t=>"_"+t[0].toLowerCase()),g[k]);e.set("callback",c+".maps."+q);a.src=`https://maps.${c}apis.com/maps/api/js?`+e;d[q]=f;a.onerror=()=>h=n(Error(p+" could not load."));a.nonce=m.querySelector("script[nonce]")?.nonce||"";m.head.append(a)}));d[l]?console.warn(p+" only loads once. Ignoring:",g):d[l]=(f,...n)=>r.add(f)&&u().then(()=>d[l](f,...n))})
-        ({key: "", v: "weekly"});</script>
+        ({key: "<?php echo $googleMapsApiKey; ?>", v: "weekly"});</script>
 </body>
 </html>
