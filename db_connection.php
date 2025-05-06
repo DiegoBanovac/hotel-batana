@@ -1,17 +1,10 @@
 <?php
-$server = "localhost"; 
-$username = "root"; 
-$password = ""; 
-$database = "hotel_batana"; 
+require_once 'config.php';
 
-
-$conn = new mysqli($server, $username, $password, $database);
-
-
-if ($conn->connect_error) {
-    die("Greška pri povezivanju: " . $conn->connect_error);
+try {
+    $conn = new PDO("mysql:host=$server;dbname=$database;charset=utf8", $username, $password);
+    $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+} catch (PDOException $e) {
+    die("Greška pri povezivanju: " . $e->getMessage());
 }
-
-$conn->set_charset("utf8");
-
 ?>

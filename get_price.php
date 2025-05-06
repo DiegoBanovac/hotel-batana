@@ -21,17 +21,19 @@ $months_hr = [
 $current_date = strtotime($start_date);
 $end_timestamp = strtotime($end_date);
 
+$query = "SELECT price FROM room_prices WHERE room_id = :room_id AND month = :month";
+$stmt = $conn->prepare($query);
+
 while ($current_date <= $end_timestamp) {
     $month_num = date('m', $current_date);
     $month_hr = $months_hr[$month_num];
 
-    $query = "SELECT price FROM room_prices WHERE room_id = ? AND month = ?";
-    $stmt = $conn->prepare($query);
-    $stmt->bind_param("is", $room_id, $month_hr);
-    $stmt->execute();
-    $result = $stmt->get_result();
+    $stmt->execute([
+        ':room_id' => $room_id,
+        ':month' => $month_hr
+    ]);
 
-    if ($row = $result->fetch_assoc()) {
+    if ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
         $total_price += $row['price'];
     }
 
