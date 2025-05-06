@@ -8,7 +8,6 @@
     <link rel="stylesheet" href="css/navbar.css">
     <link rel="stylesheet" href="css/footer.css">
     <link rel="stylesheet" href="css/sobe.css?v=<?php echo time(); ?>">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=man" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=call" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -59,7 +58,7 @@
             <h2 class="mb-4 naslov-text">Rezervacije</h2>
             <div class="mb-4">
                 <div class="d-flex align-items-center">
-                    <span class="material-symbols-outlined">call</span>
+                    <span class="fon material-symbols-outlined">call</span>
                     <p class="ml-2 mb-0">+385 91 344 4137</p>
                 </div>
             </div>
@@ -71,9 +70,53 @@
             </div>
         </div>
         <div class="blok">
-            <h2 class="podnaslov-text">Povezani dokumenti</h2>
-            <div class="divider"></div>
+            <div class="naslov-section">
+                <h2 class="naslov-section-text">Povezani dokumenti</h2>
+            </div>
+            <div>
+                <div class="blok-divider"></div>
+                    <div class = "body-section">
+                        <p class="blok-opis-text">
+                        Za posjetu restoranu molimo da unaprijed rezervirate stol.
+                        </p>
+                        <a class="link" href="url">Restoran Batana - Karta jela</a>
+                        <a class="link" href="url">Restoran Batana - Karta pića</a>
+                        <a class="link" href="url">Restoran Batana - Dječji meni</a>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
+    <?php include('assets/components/footer.php'); ?>
+    <script>
+    $(document).ready(function() {
+        let hideTimeout;
+
+        $('#sobeDropdown').on('mouseenter', function() {
+            clearTimeout(hideTimeout); // Poništi prethodni timeout ako se miš vrati unutra
+            $(this).find('.dropdown-menu').addClass('show');
+            $(this).find('.dropdown-toggle').attr('aria-expanded', 'true');
+        });
+
+        $('#sobeDropdown').on('mouseleave', function() {
+            const dropdownMenu = $(this).find('.dropdown-menu');
+            hideTimeout = setTimeout(function() {
+            dropdownMenu.removeClass('show');
+            $('#sobeDropdown').find('.dropdown-toggle').attr('aria-expanded', 'false');
+            }, 500);
+        });
+
+        $('#navbarDropdownSobe').on('click', function(e) {
+            if (!$(e.target).hasClass('dropdown-item')) {
+            window.location.href = this.href;
+            }
+        });
+
+        // Spriječi zatvaranje dropdowna ako se klikne unutar njega
+        $('.dropdown-menu').on('click', function(e) {
+            e.stopPropagation();
+        });
+    });
+  </script>
 </body>
 </html>

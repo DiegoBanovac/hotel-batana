@@ -1,0 +1,75 @@
+
+@media screen and (max-width: 1050px ){
+    thead{
+        display: none;
+    }
+    td {
+        display: block;
+    }
+
+    td:first-child {
+        text-align: center;
+        background-color: #e9ecef;
+    }
+
+    td:nth-child(2)::before{
+        content: "Siječanj";
+    }
+
+    td:nth-child(3)::before{
+        content: "Veljača";
+    }
+
+    td:nth-child(4)::before{
+        content: "Ožujak";
+    }
+
+    td:nth-child(5)::before{
+        content: "Travanj";
+    }
+
+    td:nth-child(6)::before{
+        content: "Svibanj";
+    }
+
+    td:nth-child(7)::before{
+        content: "Lipanj";
+    }
+
+    td:nth-child(8)::before{
+        content: "Srpanj";
+    }
+
+    td:nth-child(9)::before{
+        content: "Kolovoz";
+    }
+
+    td:nth-child(10)::before{
+        content: "Rujan";
+    }
+
+    td:nth-child(11)::before{
+        content: "Listopad";
+    }
+
+    td:nth-child(12)::before{
+        content: "Studeni";
+    }
+
+    td:nth-child(13)::before{
+        content: "Prosinac";
+    }
+
+    td{
+        text-align: right;
+    }
+
+    td::before{
+        float: left;
+        margin-right: 3rem;
+        font-weight: bold;
+    }
+    tbody tr:hover {
+        background-color: white !important;
+      }
+}

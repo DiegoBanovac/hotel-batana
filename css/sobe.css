@@ -267,9 +267,52 @@
 
   .blok{
     background-color: #f1ede1;
-    width: 50%;
+    width: 100%;
     height: 25rem;
     border-radius: 15px;
+  }
+  @media (min-width: 768px) {
+    .blok {
+      width: 50%;
+    }
+  }
+  
+  @media (min-width: 992px) {
+    .blok {
+      width: 40%;
+    }
+  }
+  .blok-divider{
+    height: 1px;
+    background-color: rgba(0, 0, 0, 0.2);
+    margin: 1rem 5rem;
+  }
+  .naslov-section {
+    display: flex;
+    flex-direction: column;
+  }
+  .naslov-section-text {
+    width: 100%;
+    text-align: center;
+    padding-top: 1.5rem;
+    font-weight: 600;
+    font-size: 24px;
+  }
+  .body-section {
+    padding-left: 5rem;
+    padding-right: 5rem;
+
+  }
+  .blok-opis-tekst{
+    font-size: 16px;
+    color: #474853;
+    line-height: 1.5;
+  }
+  .link {
+    display: flex;
+    flex-wrap: nowrap;
+    color: #5553a8;
+    margin-bottom: 5px;
   }
 
   .vrijeme {
@@ -286,4 +329,48 @@
 
     
   
+  }
+  .check-icon {
+    color: #844d36;
+    font-size: 1.2rem;
+    margin-right: 10px;
+  }
+
+  .fon {
+    color: #844d36;
+  }
+
+  .container {
+    padding-top: 5rem;
+  }
+  .progress {
+    margin-bottom: 2rem;
+  }
+
+  .header-rezervacija{
+    color: #000;
+    font-size: 24px;
+    padding-bottom: 3rem;
+  }
+
+  .button-provjeri {
+    display: flex;
+    justify-content: end;
+    padding-bottom: 3rem;
+  }
+
+  .ui-datepicker {
+    z-index: 9999 !important;
+  }
+  
+  .ui-datepicker.ui-widget {
+    max-width: 100% !important;
+    box-sizing: border-box;
+  }
+
+  @media (max-width: 576px) {
+    .ui-datepicker {
+      font-size: 14px;
+      width: 90vw !important;
+    }
   }
