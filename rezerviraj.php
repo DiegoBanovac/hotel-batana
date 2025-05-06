@@ -90,7 +90,7 @@ $(document).ready(function () {
         }
     });
 
-    // Provjeri dostupnost
+    
     $("#btn-provjeri").on("click", function(e) {
         e.preventDefault();
 
@@ -113,7 +113,12 @@ $(document).ready(function () {
                 if (response.available) {
                     $("#provjera-poruka").html(`
                         <div class="alert alert-success">Soba je dostupna u odabranom terminu.</div>
-                        <a class="btn btn-success mt-2" href="korak2.php">Sljedeći korak</a>
+                        <form method="post" action="korak2.php" class="mt-3">
+                        <input type="hidden" name="room_id" value="${room_id}">
+                        <input type="hidden" name="start_date" value="${start_date}">
+                        <input type="hidden" name="end_date" value="${end_date}">
+                        <button type="submit" class="btn btn-success">Sljedeći korak</button>
+                        </form>
                     `);
                 } else {
                     $("#provjera-poruka").html('<div class="alert alert-danger">Soba nije dostupna u tom terminu. Odaberite drugi datum.</div>');
@@ -127,6 +132,44 @@ $(document).ready(function () {
     });
 });
 </script>
+<script>
+$(document).ready(function() {
+    $("#subscribe-button").click(function() {
+        var email = $("#newsletter-email").val().trim();
 
+        if (email === "") {
+            alert("Molimo unesite svoj e-mail.");
+            return;
+        }
+
+        
+        var emailRegex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
+        if (!emailRegex.test(email)) {
+            alert("Molimo unesite validan e-mail.");
+            return;
+        }
+
+        
+        $.ajax({
+            url: 'subscribe_newsletter.php',
+            type: 'POST',
+            data: { email: email },
+            dataType: 'json', 
+            success: function(response) {
+                if (response.success) {
+                    $("#newsletter-message").text("Uspješno ste pretplaćeni na newsletter.").css("color", "green");
+                    $("#newsletter-email").val('');
+                } else {
+                    $("#newsletter-message").text(response.message).css("color", "red");
+                }
+            },
+            error: function(xhr, status, error) {
+        
+                console.warn("Neispravan odgovor servera ili server nije dostupan.");
+            }
+        });
+    });
+});
+</script>
 </body>
 </html>

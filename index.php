@@ -178,20 +178,20 @@
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
     <script>
-    // Selektiramo sve male slike
+   
     const smallImages = document.querySelectorAll('.small-img');
-    // Selektiramo glavnu sliku unutar .slika-box
+   
     const mainImage = document.querySelector('.slika-box .main-img');
 
-    // Dodajemo event listener svakoj maloj slici
+    
     smallImages.forEach(img => {
         img.addEventListener('click', () => {
-            // Promijenimo src glavne slike na onu koju smo kliknuli
+           
             mainImage.src = img.src;
         });
     });
     </script>
-    <!-- prettier-ignore -->
+    
     <script>(g=>{var h,a,k,p="The Google Maps JavaScript API",c="google",l="importLibrary",q="__ib__",m=document,b=window;b=b[c]||(b[c]={});var d=b.maps||(b.maps={}),r=new Set,e=new URLSearchParams,u=()=>h||(h=new Promise(async(f,n)=>{await (a=m.createElement("script"));e.set("libraries",[...r]+"");for(k in g)e.set(k.replace(/[A-Z]/g,t=>"_"+t[0].toLowerCase()),g[k]);e.set("callback",c+".maps."+q);a.src=`https://maps.${c}apis.com/maps/api/js?`+e;d[q]=f;a.onerror=()=>h=n(Error(p+" could not load."));a.nonce=m.querySelector("script[nonce]")?.nonce||"";m.head.append(a)}));d[l]?console.warn(p+" only loads once. Ignoring:",g):d[l]=(f,...n)=>r.add(f)&&u().then(()=>d[l](f,...n))})
         ({key: "<?php echo $googleMapsApiKey; ?>", v: "weekly"});</script>
     <script>
@@ -199,7 +199,7 @@
         let hideTimeout;
 
         $('#sobeDropdown').on('mouseenter', function() {
-            clearTimeout(hideTimeout); // Poništi prethodni timeout ako se miš vrati unutra
+            clearTimeout(hideTimeout); 
             $(this).find('.dropdown-menu').addClass('show');
             $(this).find('.dropdown-toggle').attr('aria-expanded', 'true');
         });
@@ -218,11 +218,53 @@
             }
         });
 
-        // Spriječi zatvaranje dropdowna ako se klikne unutar njega
+        
         $('.dropdown-menu').on('click', function(e) {
             e.stopPropagation();
         });
     });
   </script>
+<script>
+$(document).ready(function() {
+    $("#subscribe-button").click(function() {
+        var email = $("#newsletter-email").val().trim();
+
+        if (email === "") {
+            alert("Molimo unesite svoj e-mail.");
+            return;
+        }
+
+        
+        var emailRegex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
+        if (!emailRegex.test(email)) {
+            alert("Molimo unesite validan e-mail.");
+            return;
+        }
+
+        
+        $.ajax({
+            url: 'subscribe_newsletter.php',
+            type: 'POST',
+            data: { email: email },
+            dataType: 'json', 
+            success: function(response) {
+                if (response.success) {
+                    $("#newsletter-message").text("Uspješno ste pretplaćeni na newsletter.").css("color", "green");
+                    $("#newsletter-email").val('');
+                } else {
+                    $("#newsletter-message").text(response.message).css("color", "red");
+                }
+            },
+            error: function(xhr, status, error) {
+        
+                console.warn("Neispravan odgovor servera ili server nije dostupan.");
+            }
+        });
+    });
+});
+</script>
+
+
+
 </body>
 </html>

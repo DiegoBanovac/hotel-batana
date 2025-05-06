@@ -1,11 +1,11 @@
 <?php
-include ('db_connection.php'); // konekcija na bazu
+include ('db_connection.php'); 
 
 $room_id = $_POST['room_id'];
 $start_date = date('Y-m-d', strtotime($_POST['start_date']));
 $end_date = date('Y-m-d', strtotime($_POST['end_date']));
 
-// Provjeri postoji li rezervacija koja se preklapa
+
 $query = "SELECT * FROM reservations 
           WHERE room_id = ? 
           AND (
