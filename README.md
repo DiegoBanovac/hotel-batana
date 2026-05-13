@@ -3,6 +3,8 @@
 A hotel website with a full room booking system, built during a professional internship at Nivago.
 
 Live: [diego-banovac.infinityfreeapp.com](https://diego-banovac.infinityfreeapp.com/index.php)
+<img width="1903" height="942" alt="image" src="https://github.com/user-attachments/assets/588dff4b-ade7-43df-adc5-0648f1a5fbe9" />
+
 
 ## About
 
